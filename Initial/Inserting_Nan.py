@@ -45,9 +45,7 @@ for col in column_list3:
 # Filling NaN
 df.fillna("NaN", inplace = True)
 # Saving the new dataset
-#os.mkdir(nan_directory_path) # making new directory to save newversion
-df.to_csv("d_car.csv")
-print("done") 
+df.to_csv("cardataset.csv")
 
 
 
