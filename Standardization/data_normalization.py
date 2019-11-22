@@ -6,5 +6,5 @@ import numpy as np
 # load the Iris dataset
 df = pd.read_csv("../Cleaning/car_cleaned.csv") 
 numerical=['Year','Engine HP','Engine Cylinders',	'Number of Doors'	,'highway MPG',	'city mpg',	'Popularity','MSRP']
-df[numerical] = preprocessing.StandardScaler().fit_transform(df[numerical])
-df.to_csv('standardized_car.csv')  
+df[numerical] =preprocessing.MinMaxScaler().fit_transform(df[numerical])
+df.to_csv('normalized_car.csv')  
